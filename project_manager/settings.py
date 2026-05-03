@@ -25,9 +25,12 @@ SECRET_KEY = 'django-insecure-ybo^s1v*+#e2nbrzw6*28eqloe!w+&mk1*i4@rcyi8v#9)*kmi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [  "project-management-tool-msxy.onrender.com",
+AALLOWED_HOSTS = [
+    "project-management-tool-msxy.onrender.com",
     "localhost",
-    "127.0.0.1"]
+    "127.0.0.1",
+    ".vercel.app",
+]
 
 
 # Application definition
@@ -70,7 +73,10 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://project-management-tool-nu-eight.vercel.app",
+]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.vercel\.app$",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -94,7 +100,7 @@ CORS_ALLOW_HEADERS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://project-management-tool-nu-eight.vercel.app",
+    "https://*.vercel.app",
 ]
 
 APPEND_SLASH = False
