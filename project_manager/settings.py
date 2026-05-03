@@ -70,7 +70,10 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://project-management-t-git-b497d2-yanchalsharmaofficials-projects.vercel.app",
 ]
+
+CORS_ALLOW_CREDENTIALS = True
 
 APPEND_SLASH = False
 
