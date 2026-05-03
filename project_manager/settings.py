@@ -29,7 +29,9 @@ AALLOWED_HOSTS = [
     "project-management-tool-msxy.onrender.com",
     "localhost",
     "127.0.0.1",
-    ".vercel.app",
+    ".vercel.app",  
+    ".onrender.com",
+    
 ]
 
 
