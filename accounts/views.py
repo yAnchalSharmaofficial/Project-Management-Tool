@@ -28,6 +28,9 @@ def register(request):
 
 @api_view(['POST'])
 def login(request):
+
+    print(request.data)
+    
     email = request.data.get('email')
     password = request.data.get('password')
 

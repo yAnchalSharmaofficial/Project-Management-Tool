@@ -20,6 +20,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from projects.views import ProjectViewSet, TaskViewSet
 from accounts.views import register, login
+from views import home;
 
 router = DefaultRouter()
 router.register(r'projects', ProjectViewSet, basename='projects')
@@ -27,6 +28,8 @@ router.register(r'tasks', TaskViewSet, basename='tasks')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('', home),
 
     path('api/register/', register),
     path('api/login/', login),
