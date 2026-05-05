@@ -47,8 +47,6 @@ const PageHeader = ({ title }: Props) => {
         {title}
       </Typography>
 
-
-      <Typography>HELLO TEST</Typography>
     </Box>
   );
 };
