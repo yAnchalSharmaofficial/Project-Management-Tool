@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
-
+import dj_database_url
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,15 +26,13 @@ SECRET_KEY = 'django-insecure-ybo^s1v*+#e2nbrzw6*28eqloe!w+&mk1*i4@rcyi8v#9)*kmi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-AALLOWED_HOSTS = [
+ALLOWED_HOSTS = [
     "project-management-tool-msxy.onrender.com",
+    ".onrender.com",
+    ".vercel.app",
     "localhost",
     "127.0.0.1",
-    ".vercel.app",  
-    ".onrender.com",
-    
 ]
-
 
 # Application definition
 
@@ -131,15 +130,27 @@ WSGI_APPLICATION = 'project_manager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'project_manager',
+#         'USER': 'postgres',
+#         'PASSWORD': 'admin@12345', 
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
+# DATABASES = {
+#     "default": dj_database_url.parse(
+#         os.environ.get("DATABASE_URL")
+#     )
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'project_manager',
-        'USER': 'postgres',
-        'PASSWORD': 'admin@12345', 
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    "default": dj_database_url.parse(
+        os.environ.get("DATABASE_URL", "postgres://postgres:admin%4012345@localhost:5432/project_manager")
+    )
 }
 
 
