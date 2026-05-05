@@ -12,6 +12,15 @@ GitHub Repo: https://github.com/yAnchalSharmaofficial/Project-Management-Tool.gi
 
 ---
 
+# 🔑 Demo Access
+
+To explore the deployed application and test features with existing data, you can use the demo account:
+
+- Email: test2@gmail.com  
+- Password: 0102 
+
+👉 Use these credentials on the Login page to access the deployed data and test the full functionality of the application.
+
 # 📁 Project Structure
 
 Backend (Django):
