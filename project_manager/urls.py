@@ -21,7 +21,6 @@ from rest_framework.routers import DefaultRouter
 from projects.views import ProjectViewSet, TaskViewSet
 from accounts.views import register, login
 from rest_framework_simplejwt.views import TokenRefreshView
-# from views import home;
 
 router = DefaultRouter()
 router.register(r'projects', ProjectViewSet, basename='projects')
@@ -30,7 +29,7 @@ router.register(r'tasks', TaskViewSet, basename='tasks')
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    # path('', home),
+    path('/',login),
 
     path('api/token/refresh/', TokenRefreshView.as_view()),
 

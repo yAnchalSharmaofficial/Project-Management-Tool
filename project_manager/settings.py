@@ -130,23 +130,6 @@ WSGI_APPLICATION = 'project_manager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'project_manager',
-#         'USER': 'postgres',
-#         'PASSWORD': 'admin@12345', 
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
-
-# DATABASES = {
-#     "default": dj_database_url.parse(
-#         os.environ.get("DATABASE_URL")
-#     )
-# }
-
 DATABASES = {
     "default": dj_database_url.parse(
         os.environ.get("DATABASE_URL", "postgres://postgres:admin%4012345@localhost:5432/project_manager")
